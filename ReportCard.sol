@@ -1,3 +1,4 @@
+pragma solidity ^0.4.17 < 0.6.12;
 
 contract ReportCard{
     string public name;
@@ -17,7 +18,9 @@ contract ReportCard{
         status = newStatus;
     }
     
+    function getReportCardCurrentDetails() public view returns(string,uint,string,uint,string){
+        return(name, rollno, batch, marks, status);
+    }    
+
     
-    
-    
-}
+    }
